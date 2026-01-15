@@ -130,10 +130,15 @@
             font-size: 1.3rem;
         }
 
+        /* 替换原有的.about-text样式 */
         .about-text {
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 1rem;
+            /* 新增对齐相关样式 */
+            text-align: justify; /* 两端对齐 */
+            text-justify: inter-word; /* 单词间均匀分布空格，优化英文对齐效果 */
+            text-indent: 2em; /* 首行缩进2个字符（可选，增强段落层次感） */
         }
 
         /* 研究领域样式 */
