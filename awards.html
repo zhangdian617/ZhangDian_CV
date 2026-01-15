@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Awards & Achievements</title>
+    <style>
+        /* 全局样式（与主页面完全一致） */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* 导航栏样式（与主页面一致） */
+        nav {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 主容器样式 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+        }
+
+        /* 奖项内容区样式 */
+        .awards-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        /* 奖项时间线样式 */
+        .awards-list {
+            list-style: none;
+        }
+
+        .award-item {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid #3498db;
+            position: relative;
+        }
+
+        .award-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+            top: 0.3rem;
+        }
+
+        .award-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .award-item .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .award-item .awarder {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .award-item .description {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        /* 回到主页按钮 */
+        .back-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .awards-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏（与主页面一致，包含所有链接） -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Your Name</div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-user"></i> About</a>
+                <a href="#research"><i class="fas fa-flask"></i> Research</a>
+                <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+                <a href="#publications"><i class="fas fa-book"></i> Publications</a>
+                <a href="awards.html" style="color: #3498db;"><i class="fas fa-trophy"></i> Awards</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 奖项内容容器 -->
+    <div class="container">
+        <div class="awards-content">
+            <h3 class="section-title">Awards & Achievements</h3>
+            
+            <ul class="awards-list">
+                <!-- 替换为你的奖项信息，按时间倒序排列 -->
+                <li class="award-item">
+                    <h4>Outstanding Researcher Award</h4>
+                    <p class="date">2025</p>
+                    <p class="awarder">Your University, Faculty of Engineering</p>
+                    <p class="description">Recognized for exceptional contributions to artificial intelligence research and high-impact publications in top-tier journals.</p>
+                </li>
+
+                <li class="award-item">
+                    <h4>Research Grant Excellence Award</h4>
+                    <p class="date">2024</p>
+                    <p class="awarder">National Science Foundation (NSF)</p>
+                    <p class="description">Awarded for the proposal "Explainable AI for Healthcare Decision Making", funded with $500,000 over 3 years.</p>
+                </li>
+
+                <li class="award-item">
+                    <h4>Best Paper Award</h4>
+                    <p class="date">2023</p>
+                    <p class="awarder">International Conference on Machine Learning (ICML)</p>
+                    <p class="description">Received for the paper "Fairness-Aware Neural Networks for Medical Data Analysis", selected from 1,800 submissions (top 1% of accepted papers).</p>
+                </li>
+
+                <li class="award-item">
+                    <h4>Early Career Researcher Fellowship</h4>
+                    <p class="date">2022</p>
+                    <p class="awarder">Hong Kong Research Grants Council (RGC)</p>
+                    <p class="description">Competitive fellowship supporting early-career academics with promising research potential (awarded to only 5 researchers in computer science).</p>
+                </li>
+
+                <li class="award-item">
+                    <h4>Teaching Excellence Award</h4>
+                    <p class="date">2021</p>
+                    <p class="awarder">Your University, Center for Teaching and Learning</p>
+                    <p class="description">Recognized for outstanding teaching performance in undergraduate and graduate courses (student evaluation score: 4.9/5.0).</p>
+                </li>
+            </ul>
+
+            <!-- 回到主页按钮 -->
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Profile</a>
+        </div>
+    </nav>
+    </div>
+
+    <script>
+        // 平滑滚动效果（兼容锚点链接）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // 跳转到主页面的对应锚点
+                window.location.href = `index.html${this.getAttribute('href')}`;
+            });
+        });
+    </script>
+</body>
+</html>
