@@ -3,20 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 GitHub.io 个人主页</title>
-    <style>
-        body {
-            text-align: center;
-            margin-top: 50px;
-            font-family: Arial, sans-serif;
+    <title>你的名字 - 个人介绍</title>
+    <!-- 引入Tailwind CSS简化样式开发 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50', // 主色调（简约深蓝）
+                        secondary: '#3498db', // 辅助色（浅蓝）
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
         }
-        h1 {
-            color: #2c3e50;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .bg-gradient-profile {
+                background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+            }
         }
     </style>
 </head>
-<body>
-    <h1>Hello, GitHub.io!</h1>
-    <p>这是我的第一个 GitHub.io 个人主页 🚀</p>
+<body class="bg-gray-50 text-primary font-sans">
+    <!-- 页面容器 -->
+    <div class="max-w-3xl mx-auto px-4 py-8 md:py-16">
+        <!-- 头部：个人信息 -->
+        <header class="text-center mb-12">
+            <!-- 头像 -->
+            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-secondary/20">
+                <!-- 替换成你的头像链接（建议用GitHub仓库里的图片，或免费图床） -->
+                <img src="https://avatars.githubusercontent.com/u/你的GitHubID?v=4" alt="头像" class="w-full h-full object-cover">
+            </div>
+            <!-- 姓名和标题 -->
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">你的名字</h1>
+            <p class="text-lg text-gray-600 mb-4">你的职位/标签 · 所在城市</p>
+            <!-- 简短签名 -->
+            <p class="text-gray-500 max-w-xl mx-auto text-balance">
+                你的个人签名/简介（比如：热爱编程的开发者 | 专注前端/后端/全栈开发 | 持续学习中）
+            </p>
+        </header>
+
+        <!-- 主要内容：关于我 -->
+        <section class="mb-12 bg-white rounded-lg shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <i class="fa-solid fa-user-circle mr-2 text-secondary"></i>关于我
+            </h2>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-3">
+                    你可以在这里写一段详细的个人介绍，比如：
+                </p>
+                <ul class="list-disc list-inside mb-3 text-gray-600 space-y-1">
+                    <li>教育背景：XX大学 XX专业 本科/硕士（XXXX-XXXX）</li>
+                    <li>技术栈：Python/Java/JavaScript、React/Vue、MySQL等</li>
+                    <li>兴趣方向：开源项目、算法、前端工程化等</li>
+                    <li>其他：喜欢阅读、运动、摄影等</li>
+                </ul>
+                <p>
+                    如果你有更多想分享的内容，都可以在这里补充～
+                </p>
+            </div>
+        </section>
+
+        <!-- 主要内容：项目/作品 -->
+        <section class="mb-12 bg-white rounded-lg shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <i class="fa-solid fa-code-fork mr-2 text-secondary"></i>我的项目
+            </h2>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- 项目1 -->
+                <div class="border-l-4 border-secondary pl-4 hover:bg-gray-50 transition-colors p-2">
+                    <h3 class="font-bold text-lg">项目名称1</h3>
+                    <p class="text-gray-600 mb-2">项目简介：一句话说明项目功能和技术栈</p>
+                    <a href="https://github.com/你的用户名/项目仓库名" target="_blank" class="text-secondary hover:underline flex items-center">
+                        <i class="fa-brands fa-github mr-1"></i> GitHub 仓库
+                    </a>
+                </div>
+                <!-- 项目2 -->
+                <div class="border-l-4 border-secondary pl-4 hover:bg-gray-50 transition-colors p-2">
+                    <h3 class="font-bold text-lg">项目名称2</h3>
+                    <p class="text-gray-600 mb-2">项目简介：一句话说明项目功能和技术栈</p>
+                    <a href="https://github.com/你的用户名/项目仓库名" target="_blank" class="text-secondary hover:underline flex items-center">
+                        <i class="fa-brands fa-github mr-1"></i> GitHub 仓库
+                    </a>
+                </div>
+                <!-- 可添加更多项目 -->
+            </div>
+        </section>
+
+        <!-- 主要内容：联系方式 -->
+        <section class="mb-8 bg-white rounded-lg shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <i class="fa-solid fa-envelope mr-2 text-secondary"></i>联系我
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                <a href="mailto:你的邮箱@xxx.com" class="flex items-center hover:text-secondary transition-colors">
+                    <i class="fa-solid fa-envelope w-6 text-center"></i>
+                    <span class="ml-2">你的邮箱@xxx.com</span>
+                </a>
+                <a href="https://github.com/你的用户名" target="_blank" class="flex items-center hover:text-secondary transition-colors">
+                    <i class="fa-brands fa-github w-6 text-center"></i>
+                    <span class="ml-2">GitHub/你的用户名</span>
+                </a>
+                <a href="https://blog.csdn.net/你的用户名" target="_blank" class="flex items-center hover:text-secondary transition-colors">
+                    <i class="fa-solid fa-globe w-6 text-center"></i>
+                    <span class="ml-2">博客地址</span>
+                </a>
+                <a href="tel:你的手机号" class="flex items-center hover:text-secondary transition-colors">
+                    <i class="fa-solid fa-phone w-6 text-center"></i>
+                    <span class="ml-2">你的手机号（可选）</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="text-center text-gray-500 text-sm">
+            <p>© 2026 你的名字 | Hosted on GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- 简单的页面加载动画（可选） -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('opacity-100');
+            document.body.classList.remove('opacity-0');
+        });
+    </script>
 </body>
 </html>
